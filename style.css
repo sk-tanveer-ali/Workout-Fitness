@@ -1,0 +1,1131 @@
+
+/*
+Theme Name: FinalProjectTanveer
+Author: Tanveer
+Author URI: https://www.sktanveerali.com
+Description: This theme is for Final Project
+Tags: body, gym, exercise
+Version: 1.0
+*/
+
+
+
+/*
+
+font-family: 'Roboto', sans-serif;
+font-family: 'Alumni Sans', sans-serif;
+font-family: 'PT Sans Caption', sans-serif;
+font-family: 'Lato', sans-serif;
+
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bg-color: #201a5d;
+    --secondary-color: #6441ed;
+    --card-bg-color: #0f152f;
+}
+
+body{
+    background-color: black;
+    color: white;
+}
+
+section{
+    padding: 50px 0;
+}
+
+.container{
+    max-width: 1200px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/*************************** HEADER ***************************/
+
+.logo img{
+    width: 100%;
+    height: 50px;
+}
+
+.header-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.nav-list{
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-list a{
+    font-family: 'Alumni Sans', sans-serif;
+    font-size: 20px;;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-list a:hover{
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+
+/************************* MAIN BANNER **************************/
+
+.main-banner{
+    background-position: center;
+    background-size: cover;
+    height: 600px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    position: relative;
+}
+
+.main-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1; /* Ensure the overlay is above the background image */
+}
+
+.text-box{
+    text-align: left;
+    position: relative;
+    z-index: 10;
+}
+
+.text-box h1{
+    font-family: 'PT Sans Caption', sans-serif;
+    font-weight: 300;
+    font-size: 40px;
+    text-transform: capitalize;
+    width: 400px;
+    margin-bottom: 10px;
+}
+
+.text-box p{
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 20px;
+}
+
+/* .text-box form #area{
+    padding: 10px 20px;
+    background: transparent;
+    border: 2px solid var(--secondary-color);
+    color: white;
+} */
+
+.text-box .btn{
+    font-family: 'PT Sans Caption', sans-serif;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 10px 15px;
+    background-color: var(--secondary-color);
+    color: white;
+    border: 2px solid transparent;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: 0.5s;
+}
+
+.text-box .btn:hover{
+    background-color:var(--bg-color);
+    border: 2px solid var(--secondary-color);
+    cursor: pointer;
+}
+
+
+/************************* SLIDER **************************/
+
+.slider{
+    background-color: var(--secondary-color);
+    padding: 20px;
+    text-align: center;
+}
+.custom-slider .item p{
+    font-family: 'PT Sans Caption', sans-serif;
+    font-style: italic;
+    
+}
+
+
+/**************************** PRODUCTS *****************************/
+
+.products{
+    text-align: center;
+}
+
+.products h5{
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.products h2{
+    font-family: 'PT Sans Caption', sans-serif;
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-weight: 300;
+    text-transform: capitalize;
+}
+
+.products .product-card-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.products .card{
+    background-color: var(--card-bg-color);
+    border-radius: 10px;
+    padding: 30px 20px; 
+    transition: 0.3s;  
+}
+
+.products .card .flex{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.products .card .icon{
+    background-color: var(--secondary-color);
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.products .card:hover {
+    background-color: var(--secondary-color);
+}
+
+.products .card:hover .icon {
+    background-color: white;
+    color: var(--secondary-color);
+    border-radius: 50%;
+}
+
+.products .card h5{
+    font-family: 'PT Sans Caption', sans-serif;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.products .card p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 200;
+    margin-bottom: 20px;
+}
+
+.products .card a{
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.products .card a:hover{
+    scale: 1.15;
+}
+
+
+/********************** SERVICES ***********************/
+
+.services .service-flex{
+    display: flex;
+    gap: 20px;
+}
+
+.services .service-flex .left{
+    background-position: top;
+    background-size: cover;
+    width: 50%;
+    height: 400px;
+}
+
+.services .service-flex .right{
+    width: 50%;
+    padding: 30px 30px;
+}
+
+.services .service-flex .right h5{
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.services .service-flex .right h2{
+    font-family: 'PT Sans Caption', sans-serif;
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-weight: 300;
+    text-transform: capitalize;
+}
+
+.services .service-flex .right p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 200;
+    margin-bottom: 20px;
+}
+
+.services .service-flex .right ul{
+    margin-bottom: 20px;
+}
+
+.services .service-flex .right li{
+    font-family: 'PT Sans Caption', sans-serif;
+    text-transform: uppercase;
+    list-style: url(marker.svg);
+    line-height: 2;
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: 200;
+}
+
+.services .btn{
+    font-family: 'PT Sans Caption', sans-serif;
+    background-color: var(--secondary-color);
+    font-size: 14px;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    border: 1px solid transparent;
+    transition: 0.3s;
+}
+
+.services .btn:hover{
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+/********************** TRAINERS ***********************/
+
+.trainers{
+    text-align: center;
+}
+
+.trainers h2{
+    font-family: 'PT Sans Caption', sans-serif;
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-weight: 300;
+    text-transform: capitalize;
+}
+
+.trainers p{
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 20px;
+}
+
+.trainers-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.trainers .card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+    border-radius: 10px;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: overlay;
+    transition: 0.3s;
+}
+
+.trainers .card:hover{
+    background-color: rgba(100, 65, 237, 0.5);
+    scale: 1.025;
+}
+
+.trainers .socialmedia{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+.trainers .card:hover .socialmedia{
+    opacity: 1;
+}
+
+.trainers .card .icon{
+    transition: 0.3s;
+}
+
+.trainers .card .icon:hover{
+    transform: translateY(-3px);
+    cursor: pointer;
+}
+
+
+/******************************PRICING ******************************/
+
+.plans{
+    text-align: center;
+}
+
+.plans h5{
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.plans span{
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 200;
+    margin-bottom: 20px;
+}
+
+.plans h2{
+    font-family: 'PT Sans Caption', sans-serif;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    font-size: 40px;
+    font-weight: 300;
+    text-transform: capitalize;
+}
+
+.plans h3{
+    font-family: 'Alumni Sans', sans-serif;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.plans p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 200;
+    margin-bottom: 20px;
+}
+
+.plans ul{
+    margin-bottom: 20px;
+}
+
+.plans li{
+    font-family: 'PT Sans Caption', sans-serif;
+    text-transform: uppercase;
+    list-style: url(../assets/svg/marker.svg);
+    line-height: 2;
+    margin-left: 20px;
+    font-size: 14px;
+    font-weight: 200;
+    transition: 0.3s;
+}
+
+.plans .plans-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.plans .card{
+    text-align: left;
+    border-radius: 10px;
+    padding: 30px 20px;
+    background-color: var(--card-bg-color);
+    transition: 0.3s;
+}
+
+.plans .card:hover{
+    background-color: var(--secondary-color);
+    transform: translateY(-3px);
+}
+
+.plans .card:hover li{
+    list-style: url(../assets/svg/marker-white.svg);
+}
+
+.plans .card .plan-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    height: 40px;
+    transition: 0.3s;
+}
+
+.plans .card .plan-btn h6{
+    font-family: 'Roboto', sans-serif;
+    text-transform: capitalize;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.plans .card:hover .plan-btn{
+    background-color: white;
+}
+
+.plans .card:hover .plan-btn h6{
+    color: black;
+}
+
+.plans .card .plan-btn:hover h6{
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.plans .card a{
+    text-decoration: none;
+    color: white;
+}
+
+.plans .card .currency{
+    position: relative;
+}
+
+.plans .card .currency h5{
+    position: absolute;
+    top: -5%;
+}
+
+.plans .plan2{
+    position: relative;
+}
+
+.plans .plan2 .tag{
+    position: absolute;
+    top: -2%;
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+
+.plans .plan2 .tag h6{
+    font-family: 'Lato', sans-serif;
+    color: black;
+}
+
+/****************************** BLOGS ******************************/
+
+.blogs .blog-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.blogs .blog-header h2{
+    font-family: 'PT Sans Caption', sans-serif;
+    font-size: 40px;
+    font-weight: 300;
+    text-transform: capitalize;
+}
+
+.blogs .blog-header .blog-btn{
+    font-family: 'PT Sans Caption', sans-serif;
+    background-color: var(--secondary-color);
+    font-size: 14px;
+    text-decoration: none;
+    color: white;
+    text-transform: capitalize;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.blogs .blog-header .blog-btn:hover{
+    border: 1px solid white;
+}
+
+.blog-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.blogs .card{
+    background-color: var(--card-bg-color);
+    padding: 10px 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.blogs .card:hover{
+    background-color: var(--secondary-color);
+    scale: 1.02;
+}
+
+.blogs .card .image{
+    background-position: center;
+    background-size: cover;
+    max-width: 100%;
+    height: 150px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.blog-category-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.blog-category-flex p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+
+.blogs .card .post-categories a{
+    font-family: 'Alumni Sans', sans-serif;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    background-color: var(--secondary-color);
+    padding: 2px 5px;
+    transition: 0.3s;
+}
+
+.blogs .card:hover .post-categories a{
+    background-color: white;
+    color: var(--secondary-color);
+}
+
+.blogs .card .excerpt{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 200;
+    margin-bottom: 20px;
+}
+
+.blogs .card h4{
+    font-family: 'PT Sans Caption', sans-serif;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.blogs .author-flex{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 5px;
+    margin-bottom: 20px;
+}
+
+.blogs .card .profile-image{
+    background-position: center;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.blogs .author-flex .right{
+    text-align: left;
+}
+
+.blogs .author-flex h5{
+    font-family: 'PT Sans Caption', sans-serif;
+    text-transform: capitalize;
+}
+
+.blogs .author-flex p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+}
+
+.blogs .card a{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: var(--secondary-color);
+    transition: 0.3s;
+}
+
+.blogs .card:hover a{
+    color: white;
+}
+/*====== FOOTER ======*/
+
+ul {
+    list-style: none;
+}
+
+.footer {
+    padding: 50px 0;
+    background: var(--secondary-color);
+    color: #ffffff;
+}
+
+.footer-flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer-flex .card {
+    width: calc((100% - 90px) / 3);
+}
+
+.footer-flex .card h4 {
+    font-family: 'PT Sans Caption', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.footer-flex .card p {
+    font-size: 14px;
+    font-weight: 200;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.footer-flex .icon-flex {
+    display: inline-flex;
+    gap: 10px;
+}
+
+.footer-flex .fa-twitter,
+.fa-facebook-f,
+.fa-instagram {
+    font-size: 15px;
+}
+
+.footer-flex .card .icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px grey solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-flex .card .icon:hover {
+    border: 3px grey solid;
+}
+
+.footer .card2 h5 {
+    font-family: 'PT Sans Caption', sans-serif;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 0px;
+}
+
+.footer .card2 p {
+    color: #ffffff;
+}
+
+.footer .card3 h5 {
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    font-weight: 200;
+    margin-bottom: 10px;
+}
+
+.footer .card3 a:hover {
+    font-weight: 500;
+}
+
+.footer .card3 a {
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+}
+
+
+/**************SINGLE*************/
+
+.small-banner-single{
+	padding: 80px 0 80px 0;
+	background-color: var(--bg-color);
+}
+
+.small-banner-single h2{
+    font-family: 'PT Sans Caption', sans-serif;
+	text-align: center;
+	font-size: 50px;
+}
+
+.blog-single{
+    font-family: 'Roboto', sans-serif;
+	padding: 50px 0;
+}
+
+.blog-single h2,h3,h4{
+    margin-top: 20px;
+}
+
+.img-single img{
+	width: 70%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 40px;
+}
+
+/* .blog-single p{
+	margin-bottom: 20px;
+} */
+
+.blog-single .author-flex{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 5px;
+    margin-bottom: 20px;
+}
+
+.blog-single .profile-image{
+    background-position: center;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.blog-single .author-flex .right{
+    text-align: left;
+}
+
+.blog-single .author-flex h5{
+    font-family: 'PT Sans Caption', sans-serif;
+    text-transform: capitalize;
+}
+
+.blog-single .author-flex p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+}
+
+/**************ABOUT-PAGE*************/
+
+.about-banner{
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.about-us{
+    font-family: 'Roboto', sans-serif;
+}
+
+.about-us h2{
+    font-family: 'PT Sans Caption', sans-serif;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.about-us h3{
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.about-us .card-flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.about-us .card-flex .left{
+    background-position: center;
+    background-size: cover;
+    width: 50%;
+    height: 300px;
+}
+
+.about-us .card-flex .right{
+    width: 50%;
+}
+
+.about-us .card-flex .right ul{
+    margin-bottom: 20px;
+}
+
+.about-us .card-flex .right li{
+    font-family: 'PT Sans Caption', sans-serif;
+    text-transform: uppercase;
+    list-style: url(marker.svg);
+    line-height: 2;
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: 200;
+}
+
+
+
+@media (max-width: 1000px){
+
+/******SERVICES********/
+
+    .services .service-flex .left {
+            height: 350px;
+        }
+
+    .services .service-flex .right h2 {
+            margin-bottom: 10px;
+            font-size: 30px;
+            font-weight: 200;
+        }
+    
+        .services .service-flex .right p {
+            font-size: 12px;
+            font-weight: 200;
+            margin-bottom: 15px;
+        }
+    
+        .services .service-flex .right ul {
+            margin-bottom: 20px;
+        }
+    
+        .services .service-flex .right li {
+            line-height: 2;
+            font-size: 12px;
+        }
+
+        .services .btn {
+            font-size: 12px;
+            text-decoration: none;
+            padding: 8px 12px;
+        }
+
+/*****PRODUCTS********/
+
+    .products .product-card-grid {
+            gap: 10px;
+        }
+
+/*****PRICING********/
+
+.plans .plans-grid {
+        gap: 10px;
+    }
+
+    .plans li {
+        line-height: 1.5;
+        font-size: 12px;
+    }
+
+
+/*********BLOG********/
+
+    .blog-grid {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+}
+
+@media (max-width: 800px){
+
+    section {
+            padding: 30px 0;
+        }
+
+/*****PRODUCTS********/
+    
+        .products .product-card-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+/*****TRAINERS********/
+
+        .trainers-grid {
+            gap: 10px;
+        }
+
+
+/*********BLOG********/
+
+    .blogs .blog-header h2{
+        font-size: 30px;
+    }
+
+    .blogs .blog-header .blog-btn {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+
+    .blog-grid {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+    
+}
+
+
+@media (max-width: 700px){
+
+/*****PRODUCTS********/
+    .products h5 {
+        margin-bottom: 10px;
+
+    }
+    .products h2 {
+        font-size: 30px;
+    }
+
+/*****SERVICES********/
+    .services .service-flex {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .services .service-flex .left {
+        width: 100%;
+        
+    }
+
+    .services .service-flex .right {
+        width: 100%;
+        padding: 10px 10px;
+    }
+
+/****TRAINERS********/
+    .trainers h2 {
+        font-size: 30px;
+    }
+
+    .trainers p {
+        font-size: 14px;
+    }
+    
+    .trainers-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+/*****PRODUCTS********/
+
+    .plans h5 {
+        margin-bottom: 10px;
+    }   
+
+    .plans h2 {
+        font-size: 30px;
+    }
+
+    .plans .plans-grid {
+        grid-template-columns: 1fr;
+    }
+
+/*********BLOG********/
+
+    .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 630px) {
+
+    /*****SLIDER****/
+        .slider{
+            padding: 15px;
+        }
+}
+
+@media (max-width: 650px) {
+
+/*****BLOGS****/
+    .blogs .blog-header h2 {
+            width: 250px;
+        }
+}
+
+
+@media (max-width: 480px){
+/******MAIN-BANNER*******/
+    .text-box h1 {
+        font-size: 30px;
+    }
+
+    .text-box .btn {
+        padding: 8px 12px;
+    }
+
+/*****PRODUCTS********/
+
+    .products .product-card-grid {
+        grid-template-columns: 1fr;
+    }
+
+/*****BLOGS****/
+    
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+/***** FOOTER ****/
+
+    .footer-flex{
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	.footer-flex .card{
+		width: 100%;
+	}
+
+	.footer-flex .card h4{
+		font-size: 14px;
+		margin-bottom: 10px;
+	}
+
+	.footer-flex .card p{
+		margin-bottom: 10px;
+	}
+
+	.footer-flex .card .icon{
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		border: 1px grey solid;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+    
+}
+
